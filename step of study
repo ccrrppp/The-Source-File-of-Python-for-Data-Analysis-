@@ -1,0 +1,166 @@
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\Administrator>ipython --pylab
+Enthought Python Distribution (free version) -- www.enthought.com
+(type 'upgrade' or see www.enthought.com/epd/upgrade to get the full EPD)
+
+Python 2.7.3 |EPD_free 7.3-1 (32-bit)| (default, Apr 12 2012, 14:30:37) [MSC v.1
+500 32 bit (Intel)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 0.12.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+Welcome to pylab, a matplotlib-based Python environment [backend: WXAgg].
+For more information, type 'help(pylab)'.
+
+In [1]: import numpy as np
+
+In [2]: data = {i:randn() for i in range(7)}?
+Object `data` not found.
+
+In [3]: data = {i:randn() for i in range(7)}
+
+In [4]: data
+Out[4]:
+{0: -0.7052757925000296,
+ 1: 0.3865847627996833,
+ 2: -1.2915896794097401,
+ 3: -0.24912334409966472,
+ 4: -0.2556639292960847,
+ 5: 1.54432575230167,
+ 6: -0.2773607645049498}
+
+In [5]: data = {i:randn() for i in range(0.6)}
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+C:\Users\Administrator\<ipython-input-5-624267f72972> in <module>()
+----> 1 data = {i:randn() for i in range(0.6)}
+
+TypeError: range() integer end argument expected, got float.
+
+In [6]: data = {i:randn() for i in range(1)}
+
+In [7]: data
+Out[7]: {0: -1.8709334124147692}
+
+In [8]: data = {i:randn()*100 for i in range(9)}
+
+In [9]: data
+Out[9]:
+{0: 68.15800414922418,
+ 1: 26.679004294715114,
+ 2: -67.90674819360052,
+ 3: -50.01658611639511,
+ 4: 87.74148343123682,
+ 5: -104.57228433986454,
+ 6: -47.43490117906868,
+ 7: 64.10770702164143,
+ 8: 67.3751168566349}
+
+In [10]: an_apple =27
+
+In [11]: an_example =37
+
+In [12]: an
+an_apple   an_example and        angle      annotate   any
+
+In [12]: b = [1,2,3]
+
+In [13]: b.
+b.append  b.extend  b.insert  b.remove  b.sort
+b.count   b.index   b.pop     b.reverse
+
+In [13]: b.
+b.append  b.extend  b.insert  b.remove  b.sort
+b.count   b.index   b.pop     b.reverse
+
+In [13]: import datetime
+
+In [14]: datetime
+datetime      datetime64    datetime_     datetime_data
+
+In [14]: datetime.
+datetime.MAXYEAR       datetime.datetime      datetime.timedelta
+datetime.MINYEAR       datetime.datetime_CAPI datetime.tzinfo
+datetime.date          datetime.time
+
+In [14]: datetime.time()
+Out[14]: datetime.time(0, 0)
+
+In [15]: b?
+Type:       list
+Base Class: <type 'list'>
+String Form:[1, 2, 3]
+Namespace:  Interactive
+Length:     3
+Docstring:
+list() -> new empty list
+list(iterable) -> new list initialized from iterable's items
+
+In [16]: def addnumbers(a, b)
+  File "<ipython-input-16-ce478923652e>", line 1
+    def addnumbers(a, b)
+                        ^
+SyntaxError: invalid syntax
+
+
+In [17]: def addnumbers(a, b):
+   ....:     return a+b
+   ....:
+
+In [18]: addnumbers?
+Type:       function
+Base Class: <type 'function'>
+String Form:<function addnumbers at 0x047ADB70>
+Namespace:  Interactive
+File:       c:\users\administrator\<ipython-input-17-e0987af41805>
+Definition: addnumbers(a, b)
+Docstring:  <no docstring>
+
+In [19]:  def addnumbers(a, b):
+   ....:          return a+b
+   ....:
+IndentationError: unexpected indent
+
+If you want to paste code into IPython, try the %paste and %cpaste magic functio
+ns.
+
+In [20]: %paste
+ def addnumbers(a, b):
+     return a+b
+## -- End pasted text --
+
+In [21]: %cpaste
+Pasting code; enter '--' alone on the line to stop or use Ctrl-D.
+:
+:--
+reverse-i-search126`':
+In [22]:
+
+In [22]:  def addnumbers(a, b):
+   ....:
+IndentationError: unexpected indent
+
+If you want to paste code into IPython, try the %paste and %cpaste magic functio
+ns.
+
+In [23]: a = np.ran
+np.random np.rank
+
+In [23]: a = np.random.randn(100,100)
+
+In [24]: %timeit np.dot(a,a)
+1 loops, best of 3: 245 us per loop
+
+In [25]: %timeit np.dot(a,a)
+1000 loops, best of 3: 267 us per loop
+
+In [26]: %timeit np.dot(a,a)
+1000 loops, best of 3: 254 us per loop
+
+In [27]:
